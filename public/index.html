@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Copywriter & Tone Transformer | DecodeLabs Generative AI Project 2</title>
+  <meta name="description" content="Turn a raw product description into marketing copy for LinkedIn, Instagram or Email. Project 2 of the DecodeLabs Generative AI internship by Muneeb Ur Rehman." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <p class="eyebrow">DecodeLabs Generative AI &middot; Project 2</p>
+      <h1>Copywriter &amp; <span class="hl">Tone Transformer</span></h1>
+      <p class="lead">Paste a raw product description. Pick a platform and a tone. Get copy that fits.</p>
+    </header>
+
+    <main class="grid">
+      <form id="form" class="panel">
+        <label for="name">Product name</label>
+        <input id="name" type="text" maxlength="100" placeholder="EcoBottle" required />
+
+        <label for="desc">Product description</label>
+        <textarea id="desc" rows="4" maxlength="600" placeholder="Steel water bottle that keeps drinks cold for 24 hours" required></textarea>
+
+        <label>Platform</label>
+        <div class="seg" id="platform">
+          <button type="button" data-value="linkedin" aria-pressed="true">LinkedIn</button>
+          <button type="button" data-value="instagram" aria-pressed="false">Instagram</button>
+          <button type="button" data-value="email" aria-pressed="false">Email</button>
+        </div>
+
+        <label>Tone</label>
+        <div class="seg" id="tone">
+          <button type="button" data-value="professional" aria-pressed="true">Professional</button>
+          <button type="button" data-value="funny" aria-pressed="false">Funny</button>
+          <button type="button" data-value="luxury" aria-pressed="false">Luxury</button>
+        </div>
+
+        <div class="slider-row">
+          <label for="temp">Creativity (temperature)</label>
+          <span id="temp-val">0.5</span>
+        </div>
+        <input id="temp" type="range" min="0" max="1.5" step="0.1" value="0.5" />
+        <p class="hint">Low: safe and consistent. High: varied and creative. Auto-set per platform, you can change it.</p>
+
+        <button id="submit" type="submit" class="btn-primary">Generate copy</button>
+      </form>
+
+      <section class="panel output-panel">
+        <div class="out-head">
+          <h2>Result</h2>
+          <button id="copy" class="btn-ghost" type="button" hidden>Copy</button>
+        </div>
+        <div id="output" class="output placeholder">Your copy will appear here.</div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <p class="name">Muneeb Ur Rehman</p>
+        <p class="role">AI Automation Engineer</p>
+      </div>
+      <nav class="links">
+        <a href="https://www.linkedin.com/in/iammuneebrana/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/themuneebstuff" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="mailto:iammuneebrana@gmail.com">Email</a>
+      </nav>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

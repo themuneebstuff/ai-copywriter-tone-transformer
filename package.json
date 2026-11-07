@@ -1,0 +1,8 @@
+{
+  "name": "ai-copywriter-tone-transformer",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@google/genai": "^1.0.0"
+  }
+}
